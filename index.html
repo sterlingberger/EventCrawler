@@ -95,12 +95,12 @@
     fetch('data/events.json')
       .then(r => r.json())
       .then(events => {
-        events.sort((a, b) => a.date.localeCompare(b.date));
+        events.sort((a, b) => a.Date.localeCompare(b.Date));
 
         const byDate = {};
         for (const e of events) {
-          if (!byDate[e.date]) byDate[e.date] = {};
-          if (!byDate[e.date][e.Venue]) byDate[e.date][e.Venue] = [];
+          if (!byDate[e.Date]) byDate[e.Date] = {};
+          if (!byDate[e.Date][e.Venue]) byDate[e.Date][e.Venue] = [];
           byDate[e.Date][e.Venue].push(e);
         }
 
@@ -114,7 +114,7 @@
             day: '2-digit', month: '2-digit', year: 'numeric'
           });
 
-          const tdDate = document.createElement('td');
+          const td = document.createElement('td');
           tdDate.className = 'date-cell';
           tdDate.textContent = formatted;
           tr.appendChild(tdDate);
