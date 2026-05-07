@@ -10,7 +10,7 @@ namespace EventCrawler.Crawler
 {
     internal class ChelseaCrawler : ICrawler
     {
-        private string url = "https://www.chelsea.co.at/concerts.php#concert_6602";
+        private string url = "https://www.chelsea.co.at/concerts.php";
         private IPage _page;
 
         public ChelseaCrawler(IPage page)
@@ -24,7 +24,8 @@ namespace EventCrawler.Crawler
 
             await _page.GotoAsync(url);
 
-            var eventDivs = await _page.Locator("xpath=//html//body//div[@class='main']//table[@class='termindetails']").AllAsync();
+            string eventxpath = "xpath=//html//body//div[@class='main']//table[@class='termindetails']";
+            var eventDivs = await _page.Locator(eventxpath).AllAsync();
 
             string venue = "Chelsea";
 
@@ -34,13 +35,20 @@ namespace EventCrawler.Crawler
                 {
                     string date = await div.Locator(".date").InnerTextAsync();
                     string artist = await div.Locator(".band").InnerTextAsync();
+                    string info = await div.Locator(".text").InnerTextAsync();
+
+                    var anchor = div.Locator("xpath=preceding-sibling::a[starts-with(@name,'concert_')]");
+                    string concertid = await anchor.Last.GetAttributeAsync("name") ?? "";
+
+                    string link = url + $"#{concertid}";
 
                     var ev = new Event
                     {
                         Date = ParseDate(date),
                         Artist = artist,
                         Venue = venue,
-                        Info = "" //TODO
+                        Info = info,
+                        Link = link
                     };
                     result.Add(ev);
                 }

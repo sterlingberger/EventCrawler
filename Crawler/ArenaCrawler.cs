@@ -37,20 +37,25 @@ namespace EventCrawler.Crawler
 
                     string date = $"{weekday} {numweekday} {monthyear}";
                     string artist = await div.Locator(".Event_H1").InnerTextAsync();
+                    string info = await div.Locator(".Event_H2").InnerTextAsync();
                     string venue = "Arena Wien";
 
                     var span = div.Locator("xpath=.//span[@class='col-md-5  suite_Eventitle']/span[3]");
                     string? halle = await span.TextContentAsync();
 
-                    if (halle != null && halle.Contains("Dreiraum"))
-                        venue = "Arena Dreiraum";
+                    //if (halle != null && (halle.Contains("Dreiraum") || halle.Contains("Kleine Halle")))
+                    //    venue = "Arena Dreiraum";
+
+                    var anchor = div.Locator("a").First;
+                    string link = await anchor.GetAttributeAsync("href") ?? "";
 
                     var ev = new Event
                     {
                         Date = await ParseDate(date),
                         Artist = artist,
                         Venue = venue,
-                        Info = "" //TODO
+                        Info = info + " | " + halle,
+                        Link = link
                     };
                     result.Add(ev);
                 }

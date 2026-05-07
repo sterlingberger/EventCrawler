@@ -11,4 +11,22 @@
     <PackageReference Include="Microsoft.Playwright" Version="1.59.0" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <PropertyGroup>
+      <_WebRoot>$(SolutionDir)..\EventCrawler.Web\wwwroot\</_WebRoot>
+    </PropertyGroup>        
+
+    <ItemGroup>
+      <_CopyFiles Include="$(SolutionDir)data\events.json">
+        <Destination>$(_WebRoot)data\events.json</Destination>
+      </_CopyFiles>
+      <_CopyFiles Include="$(SolutionDir)index.html">
+        <Destination>$(_WebRoot)index.html</Destination>
+      </_CopyFiles>
+    </ItemGroup>
+
+    <MakeDir Directories="$(_WebRoot)data" Condition="!Exists('$(_WebRoot)data')" />
+    <Copy SourceFiles="@(_CopyFiles)" DestinationFiles="@(_CopyFiles->'%(Destination)')" SkipUnchangedFiles="true" />
+  </Target>
+
 </Project>

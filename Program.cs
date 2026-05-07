@@ -23,7 +23,7 @@ namespace EventCrawler
             var page = await browser.NewPageAsync();
 
             //Crwaler initialisieren
-            ICrawler[] crawlers = [new ArenaCrawler(page), new ChelseaCrawler(page), new KramladenCrawler(page)];
+            ICrawler[] crawlers = [new ChelseaCrawler(page), new ArenaCrawler(page), new KramladenCrawler(page)];
 
             //alle events sammeln
             var allEvents = new List<Event>();

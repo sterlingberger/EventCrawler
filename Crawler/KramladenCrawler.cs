@@ -38,17 +38,20 @@ namespace EventCrawler.Crawler
                 {
                     var datespan = div.Locator(".sk-event-item-date");
 
-                    var test = await datespan.Locator(".icon_text").InnerTextAsync();
-
                     string date = await datespan.Locator(".icon_text").InnerTextAsync();
+                    string link = await div.Locator(".sk-event-item-thumbnail img").GetAttributeAsync("src") ?? "";
+
                     string artist = await div.Locator(".sk-event-item-title").InnerTextAsync();
+
+                    string info = await div.Locator(".sk-event-item-desc--less.js-event-item-desc--less > div").InnerTextAsync();
 
                     var ev = new Event
                     {
                         Date = ParseDate(date),
                         Artist = artist,
                         Venue = venue,
-                        Info = "" //TODO
+                        Info = info,
+                        Link = link
                     };
                     result.Add(ev);
                 }

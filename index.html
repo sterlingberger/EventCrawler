@@ -1,142 +1,176 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nietengürtel</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-      background: #f9f9f9;
-      color: #1a1a1a;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nietengürtel</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+            background: #f9f9f9;
+            color: #1a1a1a;
+        }
 
-    h1 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
+        h1 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      table-layout: fixed;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            table-layout: fixed;
+        }
 
-    th {
-      background: #f1f1f1;
-      font-weight: 500;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 10px 14px;
-      border: 1px solid #ddd;
-      text-align: left;
-    }
+        th {
+            background: #f1f1f1;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 10px 14px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
 
-    th.date-col { width: 110px; }
+            th.date-col {
+                width: 110px;
+            }
 
-    td {
-      padding: 10px 14px;
-      border: 1px solid #e5e5e5;
-      vertical-align: top;
-      font-size: 0.9rem;
-    }
+        td {
+            padding: 10px 14px;
+            border: 1px solid #e5e5e5;
+            vertical-align: top;
+            font-size: 0.9rem;
+        }
 
-    td.date-cell {
-      font-weight: 500;
-      color: #555;
-      white-space: nowrap;
-    }
+            td.date-cell {
+                font-weight: 500;
+                color: #555;
+                white-space: nowrap;
+            }
 
-    .event-entry + .event-entry {
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px dashed #ddd;
-    }
+        .event-entry + .event-entry {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ddd;
+        }
 
-    .band {
-      font-weight: 500;
-    }
+        .band {
+            font-weight: 500;
+        }
 
-    .info {
-      font-size: 0.82rem;
-      color: #666;
-      margin-top: 2px;
-    }
+        .info {
+            font-size: 0.82rem;
+            color: #666;
+            margin-top: 2px;
+        }
 
-    tr:nth-child(even) td {
-      background: #fafafa;
-    }
-  </style>
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+    </style>
 </head>
 <body>
-  <table id="event-table">
-    <thead>
-      <tr>
-        <th class="date-col">Datum</th>
-        <th>Arena Wien</th>
-        <th>Arena Dreiraum</th>
-        <th>Chelsea</th>
-        <th>Kramladen</th>
-      </tr>
-    </thead>
-    <tbody id="table-body">
-      <tr><td colspan="5" style="color:#999; text-align:center;">Lade Daten...</td></tr>
-    </tbody>
-  </table>
+    <table id="event-table">
+        <thead>
+            <tr>
+                <th class="date-col">Datum</th>
+                <th>Arena Wien</th>
+                <th>Chelsea</th>
+                <th>Kramladen</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <tr><td colspan="5" style="color:#999; text-align:center;">Lade Daten...</td></tr>
+        </tbody>
+    </table>
 
-  <script>
-    const VENUES = ['Arena Wien', 'Arena Dreiraum', 'Chelsea', 'Kramladen'];
+    <script>
+        const VENUES = ['Arena Wien', 'Chelsea', 'Kramladen'];
 
-    fetch('data/events.json')
-      .then(r => r.json())
-      .then(events => {
-        events.sort((a, b) => a.Date.localeCompare(b.Date));
+        fetch('data/events.json')
+            .then(r => r.json())
+            .then(events => {
+                events.sort((a, b) => a.Date.localeCompare(b.Date));
 
-        const byDate = {};
-        for (const e of events) {
-          if (!byDate[e.Date]) byDate[e.Date] = {};
-          if (!byDate[e.Date][e.Venue]) byDate[e.Date][e.Venue] = [];
-          byDate[e.Date][e.Venue].push(e);
-        }
+                //neues Objekt für ein Datum anlegen. Dieses Objekt wird dann für jede Venue ein eigenes Objekt halten
+                //dieses wiederum hält ein Array mit Events (weil am gleichen Tag mehrere Events im selben Venue sein können)
+                const byDate = {};
+                for (const e of events) {
+                    //gibt es für Datum noch kein Objekt, dann erstell ein leeres für das Datum (byDate = { "2026-06-01": {} })
+                    if (!byDate[e.Date]) byDate[e.Date] = {};
+                    //gibts für das Datumsobjekt noch kein Array für ein spezifisches Venue, dann bereite dieses vor  (byDate = { "2026-06-01": { "Arena": [] } })
+                    if (!byDate[e.Date][e.Venue]) byDate[e.Date][e.Venue] = [];
+                    //füge ein Event dem Venue-Array für gegebenes Datum hinzu (byDate = { "2026-06-01": { "Arena": [ {Event-Objekt} ] } })
+                    byDate[e.Date][e.Venue].push(e);
+                    //Abruf von Objekten wäre dann byDate["2026-06-01"]["Arena"]
+                }
 
-        const tbody = document.getElementById('table-body');
-        tbody.innerHTML = '';
+                const tbody = document.getElementById('table-body');
+                tbody.innerHTML = '';
 
-        for (const date of Object.keys(byDate).sort()) {
-          const tr = document.createElement('tr');
+                for (const date of Object.keys(byDate).sort()) {
+                    const tr = document.createElement('tr');
 
-          const formatted = new Date(date).toLocaleDateString('de-AT', {
-            day: '2-digit', month: '2-digit', year: 'numeric'
-          });
+                    // Wochentag hinzufügen, z.B. "Fr 15.05.2026"
+                    const d = new Date(date);
+                    const weekday = d.toLocaleDateString('de-AT', { weekday: 'short' }).replace(/\.$/, '');
+                    const datePart = d.toLocaleDateString('de-AT', {
+                        day: '2-digit', month: '2-digit', year: 'numeric'
+                    });
+                    const formatted = `${weekday} ${datePart}`;
 
-          const tdDate = document.createElement('td');
-          tdDate.className = 'date-cell';
-          tdDate.textContent = formatted;
-          tr.appendChild(tdDate);
+                    const tdDate = document.createElement('td');
+                    tdDate.className = 'date-cell';
+                    tdDate.textContent = formatted;
+                    tr.appendChild(tdDate);
 
-          for (const venue of VENUES) {
-            const td = document.createElement('td');
-            const eventsForVenue = byDate[date][venue] || [];
-            eventsForVenue.forEach((e, i) => {
-              const div = document.createElement('div');
-              div.className = 'event-entry';
-              div.innerHTML = `<div class="band">${e.Artist || ''}</div><div class="info">${e.Info || ''}</div>`;
-              td.appendChild(div);
+                    for (const venue of VENUES) {
+                        const td = document.createElement('td');
+                        const eventsForVenue = byDate[date][venue] || [];
+                        eventsForVenue.forEach((e, i) => {
+                            const entry = document.createElement('div');
+                            entry.className = 'event-entry';
+
+                            const bandDiv = document.createElement('div');
+                            bandDiv.className = 'band';
+                            bandDiv.textContent = e.Artist || '';
+
+                            // Öffnet e.Link in neuem Tab, falls vorhanden
+                            if (e.Link) {
+                                bandDiv.style.cursor = 'pointer';
+                                bandDiv.title = 'Link öffnen';
+                                bandDiv.addEventListener('click', () => {
+                                    try {
+                                        window.open(e.Link, '_blank', 'noopener,noreferrer');
+                                    } catch (err) {
+                                        console.error('Konnte Link nicht öffnen', err);
+                                    }
+                                });
+                            }
+
+                            const infoDiv = document.createElement('div');
+                            infoDiv.className = 'info';
+                            infoDiv.textContent = e.InfoShort || '';
+
+                            entry.appendChild(bandDiv);
+                            entry.appendChild(infoDiv);
+                            td.appendChild(entry);
+                        });
+                        tr.appendChild(td);
+                    }
+
+                    tbody.appendChild(tr);
+                }
+            })
+            .catch(() => {
+                document.getElementById('table-body').innerHTML =
+                    '<tr><td colspan="5" style="color:red; text-align:center;">Fehler beim Laden der Daten.</td></tr>';
             });
-            tr.appendChild(td);
-          }
-
-          tbody.appendChild(tr);
-        }
-      })
-      .catch(() => {
-        document.getElementById('table-body').innerHTML =
-          '<tr><td colspan="5" style="color:red; text-align:center;">Fehler beim Laden der Daten.</td></tr>';
-      });
-  </script>
+    </script>
 </body>
 </html>
