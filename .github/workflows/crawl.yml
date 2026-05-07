@@ -2,12 +2,12 @@ name: Daily Crawl
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # täglich um 6:00 UTC
-  workflow_dispatch:       # manueller Start möglich
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   crawl:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout
@@ -18,10 +18,11 @@ jobs:
         with:
           dotnet-version: '10.0'
 
-      - name: Playwright Dependencies
-        run: |
-          dotnet build
-          pwsh bin/Debug/net8.0/playwright.ps1 install --with-deps chromium
+      - name: Build
+        run: dotnet build
+
+      - name: Install Playwright Browsers
+        run: pwsh bin/Debug/net10.0/playwright.ps1 install chromium
 
       - name: Run Crawler
         run: dotnet run --project EventCrawler.csproj
@@ -31,5 +32,6 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add data/events.json
-          git commit -m "Update events.json $(date +'%Y-%m-%d')" || echo "No changes"
+          git commit -m "Update events.json $(Get-Date -Format 'yyyy-MM-dd')" 
           git push
+        shell: pwsh
