@@ -22,7 +22,10 @@ namespace EventCrawler.Crawler
         {
             List<Event> result = new List<Event>();
 
-            await _page.GotoAsync(url);
+            await _page.GotoAsync(url, new PageGotoOptions
+            {
+                WaitUntil = WaitUntilState.NetworkIdle
+            });
 
             // Button klicken
             await _page.ClickAsync("//button[contains(text(), 'Load more events...')]");

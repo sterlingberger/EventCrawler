@@ -9,7 +9,7 @@ namespace EventCrawler.Crawler
 {
     internal class ArenaCrawler : ICrawler
     {
-        private string url = "https://arena.wien/Home/Programm#data_abonnement=-1&data_month=5&data_year=2026&data_event_category=-1&searchTerm=&data_mode=DATE&data_pagenumber=0&page_header=Mai+2026";
+        private string url = "https://arena.wien/Home/Programm";
         private IPage _page;
         public ArenaCrawler(IPage page)
         {
@@ -22,7 +22,10 @@ namespace EventCrawler.Crawler
         {
             List<Event> result = new List<Event>();
 
-            await _page.GotoAsync(url);
+            await _page.GotoAsync(url, new PageGotoOptions
+            {
+                WaitUntil = WaitUntilState.NetworkIdle
+            });
 
             var eventDivs = await _page.Locator("xpath=//*[@id=\"dnn_ctr1076_ViewEventListDirectTicketing_ctl01\"]/div[2]/div/div/div").AllAsync();
 

@@ -24,7 +24,10 @@ namespace EventCrawler.Crawler
         {
             List<Event> result = new List<Event>();
 
-            await _page.GotoAsync(url);
+            await _page.GotoAsync(url, new PageGotoOptions
+            {
+                WaitUntil = WaitUntilState.NetworkIdle
+            });
 
             string eventxpath = "xpath=//html//body//div[@class='main']//table[@class='termindetails']";
             var eventDivs = await _page.Locator(eventxpath).AllAsync();
