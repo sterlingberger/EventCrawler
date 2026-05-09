@@ -1,13 +1,6 @@
 [
   {
     "Venue": "Chelsea",
-    "Date": "2026-05-08",
-    "Artist": "JUST THIS / \u00A7 181a StGB",
-    "Link": "https://www.chelsea.co.at/concerts.php#concert_6668",
-    "InfoShort": "Doors: 19:30h,\u00A0\u00A7 181a StGB: 20:00, JUST THIS: 21:15\n\n\nEintritt freiwillige Spende\n\n\nJUST THIS / \u00A7 181a StGB \u2013 Schwere Beeintr\u00E4ch..."
-  },
-  {
-    "Venue": "Chelsea",
     "Date": "2026-05-09",
     "Artist": "REMOTE BONDAGE (DE)",
     "Link": "https://www.chelsea.co.at/concerts.php#concert_6588",
@@ -386,13 +379,6 @@
   },
   {
     "Venue": "Arena",
-    "Date": "2026-05-08",
-    "Artist": "ARENA HEURIGER zum 50er / FREITAG",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48537",
-    "InfoShort": "Essen \u0026 Drinks, Rollschuhdisco und Pub Quiz | Arena Wien - Gel\u00E4nde"
-  },
-  {
-    "Venue": "Arena",
     "Date": "2026-05-09",
     "Artist": "ARENA HEURIGER zum 50er / SAMSTAG",
     "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48541",
@@ -562,20 +548,6 @@
   {
     "Venue": "Kramladen",
     "Date": "2026-05-08",
-    "Artist": "LIVE: REFORM - TURKISH ROCK",
-    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1481849943320962.webp?v=1778232010282",
-    "InfoShort": " T\u00FCm bask\u0131 ve beklentilerinize istinaden, yeniden...."
-  },
-  {
-    "Venue": "Kramladen",
-    "Date": "2026-05-08",
-    "Artist": "LIVE: REFORM - TURKISH ROCK",
-    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1714129770037891.webp?v=1778140755011",
-    "InfoShort": " T\u00FCm bask\u0131 ve beklentilerinize istinaden, yeniden...."
-  },
-  {
-    "Venue": "Kramladen",
-    "Date": "2026-05-08",
     "Artist": "MIDNIGHTTI",
     "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1436207178306232.webp?v=1778232010283",
     "InfoShort": "08.05.2026\n\nYou\u2019re here to dance the night away or j..."
@@ -700,11 +672,130 @@
     "InfoShort": "Den Abend er\u00F6ffnet die Band Retrorock mit Classic ..."
   },
   {
-    "Venue": "Viper Room",
-    "Date": "2026-05-08",
-    "Artist": "WELCOME TO THE EIGHTIES",
-    "Link": "https://www.viper-room.at/events/welcome-to-the-eighties-2026-05-08",
-    "InfoShort": "Pop - Rock - Synth - Wave"
+    "Venue": "Kramladen",
+    "Date": "2026-06-18",
+    "Artist": "ALBUM RELEASE SHOW",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1422868079495640.webp?v=1778055163187",
+    "InfoShort": "Wir ver\u00F6ffentlichen unser Album! More info soon!"
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-06-19",
+    "Artist": "GIKKS \u00B7 19.06.26",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/2617223585323778.webp?v=1778140755025",
+    "InfoShort": "Die \u2018Gikks\u2019 sind eine Konzertreihe, die von dem \u00F6s..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-06-20",
+    "Artist": "MAXI NAGL - GOLFBALL (ALBUM RELEASE SHOW) @ KRAMLADEN MIT SUPPORT: TBA",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/2024449641801913.webp?v=1778140755027",
+    "InfoShort": "Maxi Nagl ver\u00F6ffentlicht am 19.6 sein neues Album ..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-06-27",
+    "Artist": "STERNPUNKTSTERN LIVE @KRAMLADEN",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1988296025123139.webp?v=1778140755026",
+    "InfoShort": "STERNpunktSTERN is back - plugged and loud\n...und ..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-07-09",
+    "Artist": "ACID ROW (CZ) \u002B THE ELEPHANT TRACKS (AUT) I KRAMLADEN",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/2476103922846947.webp?v=1778140755028",
+    "InfoShort": "Don \u0301t miss this!\n\n\u0022Acid Row\u0022 from Czechia and the l..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-07-17",
+    "Artist": "GIKKS \u00B7 17.07.26",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1230732522301062.webp?v=1778140755027",
+    "InfoShort": "Die \u2018Gikks\u2019 sind eine Konzertreihe, die von dem \u00F6s..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-07-25",
+    "Artist": "PAINTING CLOUDS \u002B SUPPORT | KRAMLADEN",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1173430221536214.webp?v=1778140755029",
+    "InfoShort": "Coming soon "
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-08-29",
+    "Artist": "SCRUTCH \u0026 JONAS FEURLE - WORLD TOUR \u002B SPECIAL GUEST!",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/779595404621807.webp?v=1778140755030",
+    "InfoShort": "Jonas Feurle and scrutch come from very different ..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-09-04",
+    "Artist": "ANNIE TAYLOR \u2022 WIEN \u2022 KRAMLADEN",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1250505743293563.webp?v=1778140755031",
+    "InfoShort": "Annie Taylor\n\n\u0022OUT OF SCALE\u0022 Tour 2026\n\n09.04.2026 \u2022 W..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-09-05",
+    "Artist": "MISS MELLOW \u002B THE GOOD LIBRARY \u002B THE SOUND AYE",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1398946398637788.webp?v=1778140755031",
+    "InfoShort": "Miss Mellow \u002B The Good Library \u002B The Sound Aye\nLIVE..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-10-07",
+    "Artist": "DIE CIGARETTEN LIVE IN WIEN",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1943596619893615.webp?v=1778140755032",
+    "InfoShort": "Die Cigaretten kommen endlich wieder nach Wien - m..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-10-09",
+    "Artist": "BAIBA \u2022 DELUSIONAL \u2661 ALBUM RELEASE \u2661 VIENNA",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/2748971452133690.webp?v=1778140755032",
+    "InfoShort": "Door: 19:30\nStart: 20:30\nSorry, not sorry \u2013 BAIBA ma..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-10-10",
+    "Artist": "WIEN_KRAMLADEN - .LIMA \u0026 MEERSEIN - CONERT",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/4043443079250658.webp?v=1778140755033",
+    "InfoShort": "10.10.2026 - WIEN\n\nKRAMLADEN, 39/40 u-bahnbogen, 108..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-10-23",
+    "Artist": "MODS VS. ROCKERS II",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/770936199297329.webp?v=1778140755034",
+    "InfoShort": "Der Beatclub mit volle Kanne Rhythm \u0026 Blues, (Frea..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-11-06",
+    "Artist": "CHRISTIAN ALBRECHT LIVE IM KRAMLADEN WIEN",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/2664319167277737.webp?v=1778140755034",
+    "InfoShort": "Christian Albrecht live im Kramladen Wien\n\n"
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-11-07",
+    "Artist": "TERRA TOMA // SPUREN LLILL // COLLECTIVE REALITY @ KRAMLADEN",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/2012106659402806.webp?v=1778140755035",
+    "InfoShort": "Gitarren fransen aus.\n\nMaschinen stolpern im Takt.\nTe..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-11-14",
+    "Artist": "RATHMANN \u002B SUPPORT: ZELDA WEBER",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1941431639838061.webp?v=1778140755036",
+    "InfoShort": "\n\nVVK: https://rathmann.schigged.de/\nRathmann spielen..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2027-01-30",
+    "Artist": "PEER MAGNUS - ALBUM RELEASE SHOW",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1336160431894710.webp?v=1778140755035",
+    "InfoShort": "Release Show zur Ver\u00F6ffentlichung des Deb\u00FCtalbums ..."
   },
   {
     "Venue": "Viper Room",
@@ -936,6 +1027,13 @@
     "Artist": "BREAKDOWN",
     "Link": "https://www.viper-room.at/events/breakdown-2-2026-07-18",
     "InfoShort": "Emo-, Nu Metal \u0026 Metalcore Night"
+  },
+  {
+    "Venue": "Viper Room",
+    "Date": "2026-07-29",
+    "Artist": "Live: PANZERFAUST",
+    "Link": "https://www.viper-room.at/events/live-panzerfaust-0726",
+    "InfoShort": "presented by TON - Music Productions"
   },
   {
     "Venue": "Viper Room",
@@ -1254,13 +1352,6 @@
   },
   {
     "Venue": "Rhiz",
-    "Date": "2026-05-08",
-    "Artist": "Kollektiv Klanggerecht",
-    "Link": "https://rhiz.wien/copilotevent/08-05-2026_kollektiv-klanggerecht",
-    "InfoShort": "Tanzinstanz Vol. 4"
-  },
-  {
-    "Venue": "Rhiz",
     "Date": "2026-05-09",
     "Artist": "Mel*E",
     "Link": "https://rhiz.wien/copilotevent/09-05-2026_mel-e-album-praesentation",
@@ -1332,6 +1423,13 @@
   {
     "Venue": "Rhiz",
     "Date": "2026-05-23",
+    "Artist": "Displeaser",
+    "Link": "https://rhiz.wien/copilotevent/23-05-2026_displeaser-support-gehoersturz-woke",
+    "InfoShort": "Support: Geh\u00F6rsturz, Woke"
+  },
+  {
+    "Venue": "Rhiz",
+    "Date": "2026-05-23",
     "Artist": "Dunkelton Kollektiv",
     "Link": "https://rhiz.wien/copilotevent/23-05-2026_dunkelton-kollektiv-noise-of-birth",
     "InfoShort": "Noise Of Birth"
@@ -1394,13 +1492,6 @@
   },
   {
     "Venue": "B72",
-    "Date": "2026-05-08",
-    "Artist": "BASSCLUB PRESENTS: JINX IN DUB",
-    "Link": "https://www.b72.at//program/10231/BASSCLUB_presents_JINX_IN",
-    "InfoShort": ""
-  },
-  {
-    "Venue": "B72",
     "Date": "2026-05-09",
     "Artist": "WNMR NATURTALENTE",
     "Link": "https://www.b72.at//program/10134/WNMR_Naturtalente",
@@ -1425,6 +1516,13 @@
     "Date": "2026-05-24",
     "Artist": "G\u00DCRTEL CONNECTION #18",
     "Link": "https://www.b72.at//program/10097/Grtel_Connection_18",
+    "InfoShort": ""
+  },
+  {
+    "Venue": "B72",
+    "Date": "2026-05-27",
+    "Artist": "ARNE FEIERABEND",
+    "Link": "https://www.b72.at//program/10313/ARNE_FEIERABEND",
     "InfoShort": ""
   },
   {
