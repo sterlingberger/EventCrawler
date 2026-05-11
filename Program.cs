@@ -30,11 +30,11 @@ namespace EventCrawler
 
             //Crwaler initialisieren
             ICrawler[] crawlers = [
-                //new ArenaCrawler(page),
-                //new ChelseaCrawler(page),
-                //new KramladenCrawler(page),
-                //new ViperRoomCrawler(page),
-                //new RhizCrawler(page),
+                new ArenaCrawler(page),
+                new ChelseaCrawler(page),
+                new KramladenCrawler(page),
+                new ViperRoomCrawler(page),
+                new RhizCrawler(page),
                 new B72Crawler(page)
                 ];
 
