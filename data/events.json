@@ -1,20 +1,6 @@
 [
   {
     "Venue": "Arena",
-    "Date": "2026-05-11",
-    "Artist": "HERMANO (us) \u002B TRUCKFIGHTERS (swe) \u002B ONEIDA (us) \u002B SOLACE (us)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48391",
-    "InfoShort": "Roadtrip To Outta Space | Arena Wien - Gro\u00DFe Halle"
-  },
-  {
-    "Venue": "Arena",
-    "Date": "2026-05-11",
-    "Artist": "SICK THOUGHTS (us) \u002B BAD WEED (aut) \u002B NAZI TAMPONS (sk)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48509",
-    "InfoShort": " | Arena Wien - Dreiraum"
-  },
-  {
-    "Venue": "Arena",
     "Date": "2026-05-12",
     "Artist": "CRIPPLED BLACK PHOENIX (uk/swe) \u002B TEMPLE FANG (hol)",
     "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48358",
@@ -44,16 +30,16 @@
   {
     "Venue": "Arena",
     "Date": "2026-05-16",
-    "Artist": "ABYSSAL (uk) \u002B CARCINOMA (uk) \u002B WOVENTONGVE (aut)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48454",
-    "InfoShort": " | Arena Wien - Dreiraum"
+    "Artist": "FRAZEY FORD (can) \u002B THE SAWTOOTH STARS (can)",
+    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48388",
+    "InfoShort": " | Arena Wien - Gro\u00DFe Halle"
   },
   {
     "Venue": "Arena",
     "Date": "2026-05-16",
-    "Artist": "FRAZEY FORD (can) \u002B THE SAWTOOTH STARS (can)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48388",
-    "InfoShort": " | Arena Wien - Gro\u00DFe Halle"
+    "Artist": "ABYSSAL (uk) \u002B CARCINOMA (uk) \u002B WOVENTONGVE (aut)",
+    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48454",
+    "InfoShort": " | Arena Wien - Dreiraum"
   },
   {
     "Venue": "Arena",
@@ -93,16 +79,16 @@
   {
     "Venue": "Arena",
     "Date": "2026-05-22",
-    "Artist": "NEBULA (us) \u002B JOHNNY NASTY BOOTS (us)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48458",
-    "InfoShort": "Roadtrip To Outta Space | Arena Wien - Dreiraum"
+    "Artist": "OSKA (aut) \u002B MIRA TAYLOR (aut)",
+    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48214",
+    "InfoShort": " | Arena Wien - Gro\u00DFe Halle"
   },
   {
     "Venue": "Arena",
     "Date": "2026-05-22",
-    "Artist": "OSKA (aut) \u002B MIRA TAYLOR (aut)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48214",
-    "InfoShort": " | Arena Wien - Gro\u00DFe Halle"
+    "Artist": "NEBULA (us) \u002B JOHNNY NASTY BOOTS (us)",
+    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48458",
+    "InfoShort": "Roadtrip To Outta Space | Arena Wien - Dreiraum"
   },
   {
     "Venue": "Arena",
@@ -476,20 +462,6 @@
     "InfoShort": "Doors: 19:30h, Show: 20h\n\n\n\u201CPut a knife up to his boner, cut him\u201D with those nine words a trend was born and Scene Queen (along ..."
   },
   {
-    "Venue": "Chelsea",
-    "Date": "2027-04-17",
-    "Artist": "IAN HOOPER",
-    "Link": "https://www.chelsea.co.at/concerts.php#concert_6690",
-    "InfoShort": "IAN HOOPER, S\u00E4nger und Frontmann der Indie-Folk-Band MIGHTY OAKS, k\u00FCndigt f\u00FCr April 2027 seine eigene Tour an. Den Auftakt dazu ..."
-  },
-  {
-    "Venue": "Kramladen",
-    "Date": "2026-05-11",
-    "Artist": "MEHMET ATLI - LIVE",
-    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1500977508129405.webp?v=1778487615617",
-    "InfoShort": "[Doors 19:00]\nKarten Reservierungen:\n\n\u002B43 699 1218517..."
-  },
-  {
     "Venue": "Kramladen",
     "Date": "2026-05-14",
     "Artist": "DELICATE STRANGERS - EP RELEASE CONCERT",
@@ -621,6 +593,13 @@
     "Artist": "MAXI NAGL - GOLFBALL (ALBUM RELEASE SHOW) @ KRAMLADEN MIT SUPPORT: TBA",
     "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/2024449641801913.webp?v=1778140755027",
     "InfoShort": "Maxi Nagl ver\u00F6ffentlicht am 19.6 sein neues Album ..."
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-06-27",
+    "Artist": "STERNPUNKTSTERN LIVE @KRAMLADEN",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1988296025123139.webp?v=1778487615630",
+    "InfoShort": "STERNpunktSTERN is back - plugged and loud\n...und ..."
   },
   {
     "Venue": "Viper Room",
