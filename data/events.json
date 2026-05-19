@@ -1,20 +1,6 @@
 [
   {
     "Venue": "Arena",
-    "Date": "2026-05-18",
-    "Artist": "RUSSIAN CIRCLES (us) \u002B PELICAN (us)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48377",
-    "InfoShort": "Roadtrip To Outta Space | Arena Wien - Gro\u00DFe Halle"
-  },
-  {
-    "Venue": "Arena",
-    "Date": "2026-05-18",
-    "Artist": "M.D.C. (us) \u002B BARACKCA (hun)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48427",
-    "InfoShort": " | Arena Wien - Dreiraum"
-  },
-  {
-    "Venue": "Arena",
     "Date": "2026-05-19",
     "Artist": "GREEEN (ger) \u002B JONNY MAHORO (ger) *OPEN AIR*",
     "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48299",
@@ -37,16 +23,16 @@
   {
     "Venue": "Arena",
     "Date": "2026-05-22",
-    "Artist": "NEBULA (us) \u002B JOHNNY NASTY BOOTS (us)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48458",
-    "InfoShort": "Roadtrip To Outta Space | Arena Wien - Dreiraum"
+    "Artist": "OSKA (aut) \u002B MIRA TAYLOR (aut)",
+    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48214",
+    "InfoShort": " | Arena Wien - Gro\u00DFe Halle"
   },
   {
     "Venue": "Arena",
     "Date": "2026-05-22",
-    "Artist": "OSKA (aut) \u002B MIRA TAYLOR (aut)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48214",
-    "InfoShort": " | Arena Wien - Gro\u00DFe Halle"
+    "Artist": "NEBULA (us) \u002B JOHNNY NASTY BOOTS (us)",
+    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48458",
+    "InfoShort": "Roadtrip To Outta Space | Arena Wien - Dreiraum"
   },
   {
     "Venue": "Arena",
@@ -236,13 +222,6 @@
     "Artist": "ICEBERG",
     "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48467",
     "InfoShort": " | Arena Wien - Gel\u00E4nde"
-  },
-  {
-    "Venue": "Chelsea",
-    "Date": "2026-05-18",
-    "Artist": "FUSSBALL PUBQUIZ",
-    "Link": "https://www.chelsea.co.at/concerts.php#concert_6659",
-    "InfoShort": "10. FUSSBALL\u00A0PUBQUIZ \u00A0im Chelsea\n\nAnmeldungen f\u00FCr eine Platzgarantie bitte mit Namen und Teamgr\u00F6\u00DFe an\u00A0:\u00A0fussballpubquiz@gmx.at\n\n..."
   },
   {
     "Venue": "Chelsea",
@@ -534,9 +513,9 @@
   {
     "Venue": "Viper Room",
     "Date": "2026-05-19",
-    "Artist": "Live: PALEDUSK, KNOSIS, GREYHAVEN, HEADWRECK",
+    "Artist": "AUSVERKAUFT!! PALEDUSK, KNOSIS, GREYHAVEN, HEADWRECK",
     "Link": "https://www.viper-room.at/events/live-paledusk-knosis-greyhaven-headwreck",
-    "InfoShort": "presented by MIND OVER MATTER"
+    "InfoShort": "!! SOLD OUT !!"
   },
   {
     "Venue": "Viper Room",
@@ -764,6 +743,13 @@
   },
   {
     "Venue": "Rhiz",
+    "Date": "2026-06-05",
+    "Artist": "Blind Delon",
+    "Link": "https://rhiz.wien/copilotevent/05-06-2026_blind-delon",
+    "InfoShort": "\nDatum: 05.06.2026 | Einlass: 17:30 Uhr\nBeginn: 18:00 | Ende: Uhr\n\nFounded in 2016 by Mathis Kolkoz, the Toulouse-based project ..."
+  },
+  {
+    "Venue": "Rhiz",
     "Date": "2026-06-07",
     "Artist": "Swing The Boat",
     "Link": "https://rhiz.wien/copilotevent/07-06-2026_swing-the-boat-goes-rhiz",
@@ -809,7 +795,7 @@
     "Date": "2026-06-03",
     "Artist": "10TH OASIS NIGHT W/ RUBBISH",
     "Link": "https://www.b72.at//program/10057/10th_OASIS_NIGHT_w_rubbis",
-    "InfoShort": "\n10th OASIS NIGHT in vienna feat. RUBBISH (IT) live\nWann spielen Oasis endlich wieder in Wien?\nNot in this life, some might say...."
+    "InfoShort": "\n10th OASIS NIGHT in vienna feat. RUBBISH (IT) \u0026 ORANGE ECHO live\n\nWann spielen Oasis endlich wieder in Wien?\nNot in this life, ..."
   },
   {
     "Venue": "B72",
