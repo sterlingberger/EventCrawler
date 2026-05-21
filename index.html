@@ -223,9 +223,42 @@
             display: none; /* wird per JS sichtbar gemacht, wenn nötig */
             background: transparent;
         }
-        .h-scroll .inner {
-            height: 1px;
+
+            .h-scroll .inner {
+                height: 1px;
+            }
+
+        .legal-links {
+            text-align: center;
+            margin-top: 24px;
+            color: #6B2626; /* gewünschte Schriftfarbe */
+            font-size: 0.95rem;
         }
+
+            .legal-links a {
+                color: #6B2626;
+                margin: 0 10px;
+                text-decoration: none;
+            }
+
+                .legal-links a:hover {
+                    text-decoration: underline;
+                }
+
+        .participate-link {
+            text-align: center;
+            color: #6B2626;
+        }
+
+            .participate-link a {
+                color: #6B2626;
+                margin: 0 10px;
+                text-decoration: none;
+            }
+
+                .participate-link a:hover {
+                    text-decoration: underline;
+                }
     </style>
 </head>
 <body>
@@ -250,6 +283,9 @@
             <button class="row-btn active" data-filter="week" aria-checked="true" role="radio">diese woche</button>
             <button class="row-btn" data-filter="all" aria-checked="false" role="radio">alle</button>
         </div>
+
+        <span class="sep">|</span>
+        <a class ="participate-link" href="mitmachen.html">mitmachen</a>
     </div>
 
     <div class="table-wrapper">
@@ -266,6 +302,11 @@
         </table>
     </div>
     <div class="h-scroll" id="h-scroll" aria-hidden="true"><div class="inner" id="h-scroll-inner"></div></div>
+
+    <div class="legal-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+    </div>
 
     <script>
         // Falls der Server die Venue-Objekte injiziert, erwartet das hier ein Array von Objekten:
@@ -528,53 +569,53 @@
         // Überwache die Tabelle auf Größenänderungen (für die h-scroll Leiste)
         observer.observe(document.querySelector('.table-wrapper'));
 
-(function(){
-    const wrapper = document.querySelector('.table-wrapper');
-    const table = document.getElementById('event-table');
-    const hScroll = document.getElementById('h-scroll');
-    const hInner = document.getElementById('h-scroll-inner');
+        (function () {
+            const wrapper = document.querySelector('.table-wrapper');
+            const table = document.getElementById('event-table');
+            const hScroll = document.getElementById('h-scroll');
+            const hInner = document.getElementById('h-scroll-inner');
 
-    if (!wrapper || !table || !hScroll || !hInner) return;
+            if (!wrapper || !table || !hScroll || !hInner) return;
 
-    function updateHScroll() {
-        // Inhalt breiter als sichtbarer Bereich?
-        const needH = table.scrollWidth > wrapper.clientWidth + 1;
-        if (needH) {
-            hInner.style.width = table.scrollWidth + 'px';
-            hScroll.style.display = 'block';
-        } else {
-            hScroll.style.display = 'none';
-        }
-        // Beim (Re-)Berechnen: synchronisiere Position
-        hScroll.scrollLeft = wrapper.scrollLeft;
-    }
+            function updateHScroll() {
+                // Inhalt breiter als sichtbarer Bereich?
+                const needH = table.scrollWidth > wrapper.clientWidth + 1;
+                if (needH) {
+                    hInner.style.width = table.scrollWidth + 'px';
+                    hScroll.style.display = 'block';
+                } else {
+                    hScroll.style.display = 'none';
+                }
+                // Beim (Re-)Berechnen: synchronisiere Position
+                hScroll.scrollLeft = wrapper.scrollLeft;
+            }
 
-    // Zwei-Wege-Synchronisation der Scrollposition
-    let raf = null;
-    wrapper.addEventListener('scroll', () => {
-        if (raf) cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(() => {
-            hScroll.scrollLeft = wrapper.scrollLeft;
-            raf = null;
-        });
-    });
-    hScroll.addEventListener('scroll', () => {
-        if (raf) cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(() => {
-            wrapper.scrollLeft = hScroll.scrollLeft;
-            raf = null;
-        });
-    });
+            // Zwei-Wege-Synchronisation der Scrollposition
+            let raf = null;
+            wrapper.addEventListener('scroll', () => {
+                if (raf) cancelAnimationFrame(raf);
+                raf = requestAnimationFrame(() => {
+                    hScroll.scrollLeft = wrapper.scrollLeft;
+                    raf = null;
+                });
+            });
+            hScroll.addEventListener('scroll', () => {
+                if (raf) cancelAnimationFrame(raf);
+                raf = requestAnimationFrame(() => {
+                    wrapper.scrollLeft = hScroll.scrollLeft;
+                    raf = null;
+                });
+            });
 
-    // Beobachter / Hooks für Größenänderungen
-    const ro = new ResizeObserver(updateHScroll);
-    ro.observe(table);
-    ro.observe(wrapper);
-    window.addEventListener('load', updateHScroll);
-    window.addEventListener('resize', updateHScroll);
-    // ein späterer Fix nach Bild- oder Font-Ladezeiten
-    window.addEventListener('load', () => setTimeout(updateHScroll, 50));
-})();
+            // Beobachter / Hooks für Größenänderungen
+            const ro = new ResizeObserver(updateHScroll);
+            ro.observe(table);
+            ro.observe(wrapper);
+            window.addEventListener('load', updateHScroll);
+            window.addEventListener('resize', updateHScroll);
+            // ein späterer Fix nach Bild- oder Font-Ladezeiten
+            window.addEventListener('load', () => setTimeout(updateHScroll, 50));
+        })();
     </script>
 </body>
 </html>
