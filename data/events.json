@@ -1,13 +1,6 @@
 [
   {
     "Venue": "Arena",
-    "Date": "2026-05-20",
-    "Artist": "SOFIA ISELLA (us) \u002B CLOUDY JUNE (ger) \u002B SEB LOWE (uk) *OPEN AIR*",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48363",
-    "InfoShort": " | Arena Wien - Open Air"
-  },
-  {
-    "Venue": "Arena",
     "Date": "2026-05-21",
     "Artist": "PATTI SMITH QUARTET *OPEN AIR* / *AUSVERKAUFT*",
     "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48494",
@@ -16,16 +9,16 @@
   {
     "Venue": "Arena",
     "Date": "2026-05-22",
-    "Artist": "OSKA (aut) \u002B MIRA TAYLOR (aut)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48214",
-    "InfoShort": " | Arena Wien - Gro\u00DFe Halle"
+    "Artist": "NEBULA (us) \u002B JOHNNY NASTY BOOTS (us)",
+    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48458",
+    "InfoShort": "Roadtrip To Outta Space | Arena Wien - Dreiraum"
   },
   {
     "Venue": "Arena",
     "Date": "2026-05-22",
-    "Artist": "NEBULA (us) \u002B JOHNNY NASTY BOOTS (us)",
-    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48458",
-    "InfoShort": "Roadtrip To Outta Space | Arena Wien - Dreiraum"
+    "Artist": "OSKA (aut) \u002B MIRA TAYLOR (aut)",
+    "Link": "https://arena.wien/Home/Programm-Detail/concert-id/48214",
+    "InfoShort": " | Arena Wien - Gro\u00DFe Halle"
   },
   {
     "Venue": "Arena",
@@ -218,13 +211,6 @@
   },
   {
     "Venue": "Chelsea",
-    "Date": "2026-05-20",
-    "Artist": "THUNDERBALLS - AC/DC Tributeband",
-    "Link": "https://www.chelsea.co.at/concerts.php#concert_6680",
-    "InfoShort": "Doors: 20:00; Show: 21:00\n\nJameson Connect presents\u00A0: THUNDERBALLS\n\nTHUNDERBALLS\u00A0the Austrian\u00A0AC/DC cover band, was founded at t..."
-  },
-  {
-    "Venue": "Chelsea",
     "Date": "2026-05-22",
     "Artist": "FOLLOW THE ZEBRA / TOBY WHYLE",
     "Link": "https://www.chelsea.co.at/concerts.php#concert_6542",
@@ -365,13 +351,6 @@
   },
   {
     "Venue": "Kramladen",
-    "Date": "2026-05-20",
-    "Artist": "HAYDEN ARP @ KRAMLADEN",
-    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1267421855583109.webp?v=1779084214261",
-    "InfoShort": "Hayden Arp, live with full band"
-  },
-  {
-    "Venue": "Kramladen",
     "Date": "2026-05-21",
     "Artist": "SAGE DARLEY EP RELEASE CONCERT | SUPPORT: ALMUTH",
     "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/951040167740173.webp?v=1779084214260",
@@ -502,6 +481,13 @@
     "Artist": "ALBUM RELEASE SHOW",
     "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/1422868079495640.webp?v=1779084214270",
     "InfoShort": "Wir ver\u00F6ffentlichen unser Album! More info soon!"
+  },
+  {
+    "Venue": "Kramladen",
+    "Date": "2026-06-19",
+    "Artist": "GIKKS \u00B7 19.06.26",
+    "Link": "https://data-image.sociablekit.com/sources/facebook-page-events/kramladen.wien/2617223585323778.webp?v=1778915930442",
+    "InfoShort": "Die \u2018Gikks\u2019 sind eine Konzertreihe, die von dem \u00F6s..."
   },
   {
     "Venue": "Viper Room",
@@ -652,13 +638,6 @@
   },
   {
     "Venue": "Rhiz",
-    "Date": "2026-05-20",
-    "Artist": "Rosegarden Funeral Party",
-    "Link": "https://rhiz.wien/copilotevent/20-05-2026_rosegarden-funeral-party",
-    "InfoShort": "\nDatum: 20.05.2026 | Einlass: 17:30 Uhr\nBeginn: 18:00 | Ende: Uhr\n\nRosegarden Funeral Party has been making their mark on the in..."
-  },
-  {
-    "Venue": "Rhiz",
     "Date": "2026-05-21",
     "Artist": "Twin Tooth (A) \u0026 Pulsatilla (D)",
     "Link": "https://rhiz.wien/copilotevent/21-05-2026_twin-tooth",
@@ -736,17 +715,24 @@
   },
   {
     "Venue": "Rhiz",
+    "Date": "2026-06-05",
+    "Artist": "Techno All Night Long",
+    "Link": "https://rhiz.wien/copilotevent/05-06-2026_techno-all-night-long",
+    "InfoShort": "\nDatum: 05.06.2026 | Einlass: 21:00 Uhr\nBeginn: 21:00 | Ende: Uhr\n\nTechno All Night Long\nLine Up:\nAinhoa G.\nNiko Nox\nPhilwin\nReu..."
+  },
+  {
+    "Venue": "Rhiz",
     "Date": "2026-06-07",
     "Artist": "Swing The Boat",
     "Link": "https://rhiz.wien/copilotevent/07-06-2026_swing-the-boat-goes-rhiz",
     "InfoShort": "\nDatum: 07.06.2026 | Einlass: 16:30 Uhr\nBeginn: 16:30 | Ende: 21:30 Uhr\n\nDer Lindy Hop ist ein lebendiger Paartanz aus der Swing..."
   },
   {
-    "Venue": "B72",
-    "Date": "2026-05-20",
-    "Artist": "EBE NIGHT",
-    "Link": "https://www.b72.at//program/10307/Ebe_Night",
-    "InfoShort": "\ndie zwei rapper smonstah \u0026 cr\u00EBk \u00F8nly haben bis vor wenigen jahren als groteske gesch\u00F6pfe, n\u00E4her an einem tier als an einem mens..."
+    "Venue": "Rhiz",
+    "Date": "2026-06-30",
+    "Artist": "Moonvers",
+    "Link": "https://rhiz.wien/copilotevent/30-06-2026_moonvers",
+    "InfoShort": "einmal tief durchatmen\nDatum: 30.06.2026 | Einlass: 16:30 Uhr\nBeginn: 17:30 | Ende: Uhr\n"
   },
   {
     "Venue": "B72",
@@ -806,13 +792,6 @@
   },
   {
     "Venue": "Venster99",
-    "Date": "2026-05-20",
-    "Artist": "Puffer (can) \u002B Pressure Drop",
-    "Link": "http://www.venster99.at",
-    "InfoShort": "keine Info"
-  },
-  {
-    "Venue": "Venster99",
     "Date": "2026-05-22",
     "Artist": "Tr\u00E4ume (pol) \u002B Ohyda (pol) \u002B Harsh Response",
     "Link": "http://Venster99.com",
@@ -844,13 +823,6 @@
     "Date": "2026-05-29",
     "Artist": "Phal:angst",
     "Link": "http://Soon",
-    "InfoShort": "keine Info"
-  },
-  {
-    "Venue": "Venster99",
-    "Date": "2026-06-03",
-    "Artist": "Compete Releaseshow: Spirit Crusher, Fear of Sin, Scorn",
-    "Link": "http://Www.Venster99.at",
     "InfoShort": "keine Info"
   },
   {
@@ -904,6 +876,13 @@
   },
   {
     "Venue": "Szene",
+    "Date": "2026-06-01",
+    "Artist": "choir! choir! choir!",
+    "Link": "https://szene.wien/events/choir-choir-choir/",
+    "InfoShort": "ACHTUNG: Die Show wurde von der Simm City in die ((szene)) Wien verlegt. Bereits gekaufte Tickets behalten ihre G\u00FCltigkeit.\n\nAm ..."
+  },
+  {
+    "Venue": "Szene",
     "Date": "2026-06-02",
     "Artist": "schulband der haizingergasse",
     "Link": "https://szene.wien/events/schulband-der-haizingergasse/",
@@ -929,13 +908,6 @@
     "Artist": "yonaka",
     "Link": "https://szene.wien/events/yonaka/",
     "InfoShort": "YONAKA kehren am 16. Juni in die ((szene)) Wien zur\u00FCck \u2013 und sie kommen nicht, um leise zu bleiben. Das britische Indie-Trio bri..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-05-20",
-    "Artist": "UnderCover Big-Band / Coffee Jazz Connection",
-    "Link": "https://www.cafe-carina.at/2020/events/undercover-big-band-2/",
-    "InfoShort": "UnderCover Big-Band / Coffee Jazz Connection\n\nDie nunmehr seit fast einem Vierteljahrhundert bestehende Under Cover Bigband wird..."
   },
   {
     "Venue": "Cafe Carina",
@@ -1020,103 +992,5 @@
     "Artist": "Monday Music",
     "Link": "https://www.cafe-carina.at/2020/events/funky-jazz-blues-soul-mit-dj-satchmo-2-2-2-2-2-2-2-449-567/",
     "InfoShort": "Monday Music\nDj Crimey und DJ Sachmo reiten durch Gefilde, die manchmal etwas abseits von Blues und Soul liegen.\n\nMOTTO\n\nGUTE MU..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-03",
-    "Artist": "RNP Stagetime",
-    "Link": "https://www.cafe-carina.at/2020/events/rnp-stagetime-6-782/",
-    "InfoShort": "RNP Stagetime\nEndlich wieder mal ein bisschen live spielen\n\n\u00A0\n\nSTAGETIME\nNEWCOMER LiVE ON STAGE\nhosted by Rhythm \u0026 Poetry\n\n\u00A0\n\nCa..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-04",
-    "Artist": "DonnerJam",
-    "Link": "https://www.cafe-carina.at/2020/events/donnerjam-5-739/",
-    "InfoShort": "DonnerJam\nBeim\u00A0DonnerJam\u00A0laden wir Musiker*innen unterschiedlicher Genres und Musikrichtungen ein, um gemeinsam die B\u00FChne im Caf..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-05",
-    "Artist": "\u00A0MOJO AUGUST / David Kurt \u0026 Band",
-    "Link": "https://www.cafe-carina.at/2020/events/mojo-august-david-kurt-band/",
-    "InfoShort": "\u00A0MOJO AUGUST / David Kurt \u0026 Band\n\nBild: Julia Kojeder\n\nMOJO AUGUST\u00A0(Indie / Roots Rock)\n\nhttps://www.instagram.com/mojo_august/\n..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-06",
-    "Artist": "Krooked Tooth // Kinky Muppet",
-    "Link": "https://www.cafe-carina.at/2020/events/krooked-tooth-kinky-muppet/",
-    "InfoShort": "Krooked Tooth // Kinky Muppet\nKrooked Tooth\n\nWhile exploring the abysses of the middle class\u2018 bad temper and paranoia, Krooked T..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-07",
-    "Artist": "Sonntag Ruhetag",
-    "Link": "https://www.cafe-carina.at/2020/events/sonntag-ruhetag-443-153-252-778-729/",
-    "InfoShort": "Sonntag Ruhetag\n\ngeschlossen"
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-08",
-    "Artist": "Monday Music",
-    "Link": "https://www.cafe-carina.at/2020/events/funky-jazz-blues-soul-mit-dj-satchmo-2-2-2-2-2-2-2-449-567/",
-    "InfoShort": "Monday Music\nDj Crimey und DJ Sachmo reiten durch Gefilde, die manchmal etwas abseits von Blues und Soul liegen.\n\nMOTTO\n\nGUTE MU..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-10",
-    "Artist": "VMI \u2013 Night",
-    "Link": "https://www.cafe-carina.at/2020/events/vmi-night-5-286/",
-    "InfoShort": "VMI \u2013 Night\nVMI\u00A0NIGHT @ Caf\u00E9 Carina\n\nErlebt einen Abend, der ganz im Zeichen von Musik, Kreativit\u00E4t und der einzigartigen Energi..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-12",
-    "Artist": "Secondsummer",
-    "Link": "https://www.cafe-carina.at/2020/events/secondsummer/",
-    "InfoShort": "secondsummer\n\n\nDas fulminante Quartett verfolgt in konsequenter Weise\n\ndie von vielen lang ersehnte Stilrichtung:\n=\u003E New Old-Sch..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-14",
-    "Artist": "Sonntag Ruhetag",
-    "Link": "https://www.cafe-carina.at/2020/events/sonntag-ruhetag-443-153-252-778-729/",
-    "InfoShort": "Sonntag Ruhetag\n\ngeschlossen"
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-15",
-    "Artist": "Fussball WM 2026 | Spanien \u2013 Kapverdische Inseln | Belgien \u2013 \u00C4gypten",
-    "Link": "https://www.cafe-carina.at/2020/events/fussball-wm-2026-spanien-kapverdische-inseln-belgien-aegypten/",
-    "InfoShort": "Fussball WM 2026 | Spanien \u2013 Kapverdische Inseln | Belgien \u2013 \u00C4gypten\n\nFussball WM 2026 | Spanien \u2013 Kapverdische Inseln | Belgien..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-16",
-    "Artist": "Docks (Slowcore/Shoegaze, FR) \u2738 Danny Drivr (Indie/Bedroom Pop, Wien)",
-    "Link": "https://www.cafe-carina.at/2020/events/docks-slowcore-shoegaze-fr-%e2%9c%b8-danny-drivr-indie-bedroom-pop-wien-cafe-carina/",
-    "InfoShort": "Docks (slowcore/shoegaze, FR) \u2738 Danny Drivr (indie/bedroom pop, Wien)\n\n\u2738 Docks\nSlowcore/shoegaze/indie duo from Toulouse, FR\ndoc..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-17",
-    "Artist": "CENOTAPH [TK] | SUBCUTANEOUS EXSANGUINATION [WIEN] | SLOOW [LINZ]",
-    "Link": "https://www.cafe-carina.at/2020/events/cenotaph-tk-subcutaneous-exsanguination-wien-sloow-linz/",
-    "InfoShort": "CENOTAPH [TK] | SUBCUTANEOUS EXSANGUINATION [WIEN] | SLOOW [LINZ]\n[ENGLISH VERSION BELOW]\nEine Nacht voller kompromissloser Riff..."
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-21",
-    "Artist": "Sonntag Ruhetag",
-    "Link": "https://www.cafe-carina.at/2020/events/sonntag-ruhetag-443-153-252-778-729/",
-    "InfoShort": "Sonntag Ruhetag\n\ngeschlossen"
-  },
-  {
-    "Venue": "Cafe Carina",
-    "Date": "2026-06-28",
-    "Artist": "Sonntag Ruhetag",
-    "Link": "https://www.cafe-carina.at/2020/events/sonntag-ruhetag-443-153-252-778-729/",
-    "InfoShort": "Sonntag Ruhetag\n\ngeschlossen"
   }
 ]
