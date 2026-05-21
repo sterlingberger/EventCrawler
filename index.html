@@ -11,7 +11,8 @@
             padding: 2rem;
             background: #020309; /* Seiten-Hintergrund */
             color: #e6e6e6; /* allgemeiner Text */
-            overflow-x: auto;
+            /* kein horizontales Scrolling am Body, nur die Tabelle scrollt */
+            /*overflow-x: hidden;*/
         }
 
         h1 {
@@ -28,12 +29,13 @@
             width: 100%;
             margin-bottom: 36px;
         }
-        .header-container img.header-img {
-            display: block;
-            width: min(60vw, 700px); /* skaliert mit Viewport */
-            max-width: 85%;
-            height: auto;
-        }
+
+            .header-container img.header-img {
+                display: block;
+                width: min(60vw, 700px); /* skaliert mit Viewport */
+                max-width: 85%;
+                height: auto;
+            }
 
         /* schmale rote Linie unter dem Bild, nicht full-width */
         .header-divider {
@@ -45,11 +47,13 @@
             opacity: 1;
         }
 
+        /* Filters bleiben zentriert oberhalb der scrollbaren Tabelle */
         .filters {
             margin-bottom: 1rem;
             display: flex;
             gap: 1rem;
             align-items: center;
+            justify-content: center; /* zentriert die Filter */
         }
 
             /* Separator zwischen Icon-Filtern und Row-Filter-Buttons */
@@ -82,6 +86,21 @@
                 border-color: #28a745; /* aktiv bleibt grün */
                 background: #0f2a12; /* dezenter Grünton-Hintergrund bei aktiv */
                 color: #ffffff;
+            }
+
+        /* Wrapper: Nur dieser Bereich scrollt horizontal */
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: auto;
+            max-height: 80vh;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-gutter: stable;
+        }
+
+            /* Tabelle zentrieren innerhalb des Wrappers */
+            .table-wrapper table {
+                margin: 0 auto;
             }
 
         table {
@@ -190,6 +209,23 @@
                 border-color: #28a745; /* grün */
                 box-shadow: 0 0 0 4px rgba(40,167,69,0.12);
             }
+
+        /* Horizontale Scroll-Leiste (mobil) - sichtbar bei Bedarf per JS */
+        .h-scroll {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 18px; /* Höhe der sichtbaren Leiste */
+            overflow-x: auto;
+            overflow-y: hidden;
+            z-index: 9999;
+            display: none; /* wird per JS sichtbar gemacht, wenn nötig */
+            background: transparent;
+        }
+        .h-scroll .inner {
+            height: 1px;
+        }
     </style>
 </head>
 <body>
@@ -216,17 +252,20 @@
         </div>
     </div>
 
-    <table id="event-table">
-        <thead>
-            <tr id="header-row">
-                <th class="date-col">Datum</th>
-                <!-- venue header cells werden zur Laufzeit erzeugt -->
-            </tr>
-        </thead>
-        <tbody id="table-body">
-            <tr><td colspan="5" style="color:#999; text-align:center;">Lade Daten...</td></tr>
-        </tbody>
-    </table>
+    <div class="table-wrapper">
+        <table id="event-table">
+            <thead>
+                <tr id="header-row">
+                    <th class="date-col">Datum</th>
+                    <!-- venue header cells werden zur Laufzeit erzeugt -->
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr><td colspan="5" style="color:#999; text-align:center;">Lade Daten...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h-scroll" id="h-scroll" aria-hidden="true"><div class="inner" id="h-scroll-inner"></div></div>
 
     <script>
         // Falls der Server die Venue-Objekte injiziert, erwartet das hier ein Array von Objekten:
@@ -310,7 +349,7 @@
             } else if (currentRowFilter === 'week') {
                 // Woche: Montag bis Sonntag (DE-Konvention)
                 const day = today.getDay(); // 0=So,1=Mo...
-                const diffToMonday = (day + 6) % 7; // 0->6,1->0,... 
+                const diffToMonday = (day + 6) % 7; // 0->6,1->0,...
                 start = startOfDay(new Date(today.getFullYear(), today.getMonth(), today.getDate() - diffToMonday));
                 end = startOfDay(new Date(start.getFullYear(), start.getMonth(), start.getDate() + 6));
             } else { // all
@@ -438,7 +477,7 @@
         filterU3.addEventListener('change', updateColumnVisibility);
         filterU6.addEventListener('change', updateColumnVisibility);
 
-        // Hilfsfunktion: Icon-Visual abhängig vom Checkbox-Status setzen
+        // Hilfsfunktion: Icon-Visual abhängig vom Checkbox-Status gesetzt
         function updateIconState(icon, checked) {
             if (checked) {
                 icon.classList.add('active');
@@ -471,6 +510,71 @@
             // falls Checkbox anderweitig geändert wird, Icon mitziehen
             cb.addEventListener('change', () => updateIconState(icon, cb.checked));
         });
+
+        // Sichtbarkeit der h-scroll Leiste steuern (mobil)
+        const hScroll = document.querySelector('.h-scroll');
+        const observer = new ResizeObserver(entries => {
+            entries.forEach(entry => {
+                const { offsetWidth, scrollWidth } = entry.target;
+                // Zeige die h-scroll Leiste nur an, wenn der Inhalt breiter ist als der sichtbare Bereich
+                if (scrollWidth > offsetWidth) {
+                    hScroll.style.display = 'block';
+                } else {
+                    hScroll.style.display = 'none';
+                }
+            });
+        });
+
+        // Überwache die Tabelle auf Größenänderungen (für die h-scroll Leiste)
+        observer.observe(document.querySelector('.table-wrapper'));
+
+(function(){
+    const wrapper = document.querySelector('.table-wrapper');
+    const table = document.getElementById('event-table');
+    const hScroll = document.getElementById('h-scroll');
+    const hInner = document.getElementById('h-scroll-inner');
+
+    if (!wrapper || !table || !hScroll || !hInner) return;
+
+    function updateHScroll() {
+        // Inhalt breiter als sichtbarer Bereich?
+        const needH = table.scrollWidth > wrapper.clientWidth + 1;
+        if (needH) {
+            hInner.style.width = table.scrollWidth + 'px';
+            hScroll.style.display = 'block';
+        } else {
+            hScroll.style.display = 'none';
+        }
+        // Beim (Re-)Berechnen: synchronisiere Position
+        hScroll.scrollLeft = wrapper.scrollLeft;
+    }
+
+    // Zwei-Wege-Synchronisation der Scrollposition
+    let raf = null;
+    wrapper.addEventListener('scroll', () => {
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+            hScroll.scrollLeft = wrapper.scrollLeft;
+            raf = null;
+        });
+    });
+    hScroll.addEventListener('scroll', () => {
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+            wrapper.scrollLeft = hScroll.scrollLeft;
+            raf = null;
+        });
+    });
+
+    // Beobachter / Hooks für Größenänderungen
+    const ro = new ResizeObserver(updateHScroll);
+    ro.observe(table);
+    ro.observe(wrapper);
+    window.addEventListener('load', updateHScroll);
+    window.addEventListener('resize', updateHScroll);
+    // ein späterer Fix nach Bild- oder Font-Ladezeiten
+    window.addEventListener('load', () => setTimeout(updateHScroll, 50));
+})();
     </script>
 </body>
 </html>
